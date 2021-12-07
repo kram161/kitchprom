@@ -1,2 +1,7 @@
-// Тут происходит подключение шрифтов
-// ../../fonts/Roboto.woff2
+@font-face {
+  font-family:'Raleway';
+  src: url('../../fonts/Raleway700.eot');
+  src: local('☺'), url('../../fonts/Raleway700.woff') format('woff'), url('../../fonts/Raleway700.ttf') format('truetype'), url('../../fonts/Raleway700.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
