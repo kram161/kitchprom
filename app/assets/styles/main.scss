@@ -16,6 +16,11 @@
     font-size: 3.6rem;
     font-weight: 500;
   }
+  h5{
+    font-family: Roboto, sans-serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
   p{
     font-size: 1.6rem;
     font-weight: 400;
@@ -206,6 +211,58 @@
     &__button{
       margin:70px 0 0 0;
     }
+  }
+  &__how-we-work,&__our-advantages,&__our-partners{
+    margin:170px 0 0 0;
+    h2{
+      color:#6398DC;
+    }
+    &__block{
+      margin:70px 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #6398DC;
+      width: 100%;
+      &__unit{
+        width: 25%;
+        border-right: 1px solid #6398DC;
+        padding: 0 20px 10px 0;
+        h5{
+          color: #4D4D4D;
+          padding:0 0 18px 0;
+          min-height: 40px;
+          margin:0;
+        }
+        p{
+          margin: 0;
+        }
+      }
+      &__unit:not(:first-child){
+        padding: 0 20px 20px 20px;
+      }
+    }
+  }
+  &__our-advantages{
+    &__list{
+      margin: 70px 0 0 0;
+      h5{
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 0;
+        position: relative;
+        margin: 0;
+        border-top: 1px solid #6398DC;
+        span{
+          color:#35913D;
+        }
+      }
+      h5:last-child{
+        border-bottom: 1px solid #6398DC;
+      }
+    }
+  }
+  &__our-partners{
+
   }
 }
 .catalog{
