@@ -12614,6 +12614,12 @@ textarea.form-control-lg {
   margin: 0;
 }
 
+.container {
+  max-width: 1440px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+
 .transparent-button, .color-button {
   display: inline-block;
   margin: 0;
@@ -12643,12 +12649,6 @@ textarea.form-control-lg {
   background: #35913D;
   border: 1px #35913D solid;
   color: #fff;
-}
-
-.container {
-  max-width: 1440px;
-  padding: 0 25px;
-  margin: 0 auto;
 }
 
 .menu {
