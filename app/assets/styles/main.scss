@@ -546,14 +546,15 @@ footer{
   }
 }
 .catalog-selected{
-  padding: 158px 0 0 0;
+  padding: 158px 0 60px 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
   &__type-list{
     display: flex;
     justify-content: space-between;
     &__title{
       display: flex;
-      cursor: pointer;
       width: 100%;
       h2{
         color:#6398DC;
@@ -562,11 +563,13 @@ footer{
         height: auto;
         display: block;
         line-height: 5.7rem;
+        cursor: pointer;
       }
       svg{
         width: 34px;
         height: 22px;
         margin:22px 0 0 0;
+        cursor: pointer;
       }
     }
     &__menu{
@@ -733,6 +736,67 @@ footer{
   }
   &__product-table{
     margin:50px 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    &__unit{
+      width: 23%;
+      padding: 35px 25px;
+      margin: 0 20px 40px 0;
+      border: 1px solid #6398DC;
+      box-sizing: border-box;
+      &__body{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        p{
+          width: 60%;
+        }
+        &__button{
+          background: #6398DC;
+          width: 43px;
+          height: 43px;
+          position: relative;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          svg{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            path{
+              transition: all 0.3s ease;
+            }
+          }
+        }
+        &__button:hover{
+          background: #35913D;
+          transform: scale(1.1,1.1);
+        }
+      }
+      &__price{
+        display: flex;
+        justify-content: flex-start;
+        p{
+          color:#6398DC;
+          font-weight: 500;
+          font-size: 2.4rem;
+          margin:0 5px 0 0;
+        }
+        span{
+          color:#696969;
+          font-weight: 400;
+          font-size: 14px;
+          margin:auto 0;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+  &__button{
+    align-self: center;
   }
 }
 .main-background{
