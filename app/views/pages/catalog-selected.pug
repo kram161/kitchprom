@@ -246,6 +246,30 @@ block content
                                 .check-box
                                 span.checkbox-text Frascold
                     .catalog-selected__filters__buttons__range
+                        .catalog-selected__filters__buttons__range__wrapper
+                            .catalog-selected__filters__buttons__range__wrapper__container
+                                .catalog-selected__filters__buttons__range__wrapper__container__slider-track
+                                input(
+                                    type="range"
+                                    min='0'
+                                    max='1609000'
+                                    value='0'
+                                    id='slider-1'
+                                    oninput='slideOne()'
+                                )
+                                input(
+                                    type="range"
+                                    min='0'
+                                    max='1609000'
+                                    value='1609000'
+                                    id='slider-2'
+                                    oninput='slideTwo()'
+                                )
+                            .catalog-selected__filters__buttons__range__wrapper__values
+                                span#range1 0
+                                span#range2 1609000
+                        p ₽
+
             .catalog-selected__product-table
                 .catalog-selected__product-table__unit
                     img(src='../../assets/img/catalog-selected1.png')
@@ -345,4 +369,4 @@ block content
 
 
 block scripts
-    script(src="assets/scripts/main.min.js")
+    script(src="assets/scripts/main.js")

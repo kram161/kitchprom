@@ -13,29 +13,6 @@ module.exports = function script() {
 		.pipe(sourcemaps.init())
 		.pipe(eslint())
 		.pipe(eslint.format())
-		.pipe(
-			webpack({
-				mode: 'production',
-				output: {
-					filename: 'main.min.js',
-				},
-				module: {
-					rules: [
-						{
-							test: /\.m?js$/,
-							exclude: /(node_modules|bower_components)/,
-							use: {
-								loader: 'babel-loader',
-								options: {
-									presets: ['@babel/preset-env'],
-								},
-							},
-						},
-					],
-				},
-				plugins: [new CircularDependencyPlugin(), new DuplicatePackageCheckerPlugin()],
-			}),
-		)
 		.pipe(sourcemaps.write('/sourcemaps/'))
 		.pipe(dest('build/assets/scripts'));
 };

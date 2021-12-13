@@ -12767,6 +12767,15 @@ textarea.form-control-lg {
   display: flex;
   padding: 19px 0;
 }
+.menu-wrapper__unit .menu__way__unit {
+  margin: 0 5px 0 0;
+}
+.menu-wrapper__unit .menu__way__unit a {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #696969;
+  text-decoration: none;
+}
 
 footer {
   background: #6398DC;
