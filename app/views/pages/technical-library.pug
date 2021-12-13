@@ -1,0 +1,28 @@
+extends ../layouts/master
+
+block title
+    link(rel="stylesheet", href="assets/css/styles.min.css")
+
+block content
+    include ../includes/modules/menu
+    .container
+        .technical-library
+            .technical-library__type-list.technical-library__type-list-active
+                .technical-library__type-list__title
+                    h2 Технические каталоги
+                    <svg width="34" height="22" viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.25 0L17 12.75L29.75 0L34 4.25L17 21.25L0 4.25L4.25 0Z" fill="#6398DC"/></svg>
+                .technical-library__type-list__menu
+                    a(href='#') Программы подбора оборудования
+                    a(href='#') Сертификаты
+
+
+
+
+            block content
+                include ../includes/modules/our-partners
+    block content
+        include ../includes/modules/footer
+
+
+block scripts
+    script(src="assets/scripts/main.js")
