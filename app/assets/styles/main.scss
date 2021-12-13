@@ -11,6 +11,11 @@
     font-size: 6.4rem;
     font-weight: 700;
   }
+  h3{
+    font-family: 'Raleway', sans-serif;
+    font-size: 4.8rem;
+    font-weight: 700;
+  }
   h4{
     font-family: 'Raleway', sans-serif;
     font-size: 3.6rem;
@@ -851,7 +856,7 @@ footer{
     &__unit{
       width: 23%;
       padding: 35px 25px;
-      margin: 0 20px 40px 0;
+      margin: 0 auto;
       border: 1px solid #6398DC;
       box-sizing: border-box;
       &__body{
@@ -907,6 +912,99 @@ footer{
     align-self: center;
   }
 }
+.product-card{
+  padding: 158px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  &__information{
+    display: flex;
+    justify-content: space-between;
+    &__image{
+      width: 40%;
+      img{
+        width: 100%;
+        height: 543px;
+        object-fit: cover;
+        border: 1px solid #6398DC;
+      }
+    }
+    &__description{
+      width: 50%;
+      h3{
+        color:#6398DC;
+        padding: 0 0 30px 0;
+        margin:0;
+      }
+      h4{
+        color:#4D4D4D;
+        margin:0;
+      }
+      p{
+        line-height: normal;
+        span{
+          text-decoration: line-through;
+          font-size: 1.8rem;
+        }
+      }
+      &__buttons{
+        padding: 70px 0 30px 0;
+        a{
+          margin:0 20px 0 0;
+        }
+      }
+      span{
+        font-size: 1.4rem;
+        color:#696969;
+        font-weight: 400;
+      }
+    }
+  }
+  &__technical-details{
+    padding: 70px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    &__list{
+      width: 40%;
+      &__unit{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-top:1px solid #6398DC;
+        border-bottom:1px solid #6398DC;
+        margin:-1px 0 0 0;
+        p{
+          color: #696969;
+          font-size: 1.8rem;
+          font-weight: 500;
+        }
+        span{
+          color: #696969;
+          font-size: 1.8rem;
+          font-weight: 400;
+        }
+      }
+    }
+    &__description{
+      width: 50%;
+      p{
+        font-size: 1.6rem;
+        color:#696969;
+        font-weight: 400;
+      }
+    }
+    &__list,&__description{
+      h4{
+        color:#4D4D4D;
+        padding: 0 0 50px 0;
+      }
+    }
+  }
+  &__catalog{
+    padding: 70px 0 0 0;
+  }
+}
+
+
 .main-background{
   width: 100%;
   height: 450px;
