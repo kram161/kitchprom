@@ -1,0 +1,96 @@
+extends ../layouts/master
+
+block title
+    link(rel="stylesheet", href="assets/css/styles.min.css")
+
+block content
+    include ../includes/modules/menu
+    .container
+        .cart
+            h2 Корзина покупателя
+            .cart__empty
+                h4 Корзина пуста...
+            .cart__content
+                .cart__content__line
+                    .cart__content__line__unit
+                        .cart__content__line__unit__image
+                            img(src='../../assets/img/catalog-selected1.png')
+                        .cart__content__line__unit__information
+                            .cart__content__line__unit__information__description
+                                .cart__content__line__unit__information__description__name
+                                    p Компрессор полугерметичный Frascold W75-240Y
+                                .cart__content__line__unit__information__description__price
+                                    p 566391.96 ₽
+                                    span 623031.156 ₽
+                            .cart__content__line__unit__information__buttons
+                                <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 10H10V22H8V10Z" fill="#35913D"/><path d="M14 10H16V22H14V10Z" fill="#35913D"/><path d="M0 4V6H2V26C2 26.5304 2.21071 27.0391 2.58579 27.4142C2.96086 27.7893 3.46957 28 4 28H20C20.5304 28 21.0391 27.7893 21.4142 27.4142C21.7893 27.0391 22 26.5304 22 26V6H24V4H0ZM4 26V6H20V26H4Z" fill="#35913D"/><path d="M8 0H16V2H8V0Z" fill="#35913D"/></svg>
+                                .cart__content__line__unit__information__buttons__counter
+                                    .decrease
+                                        <svg width="12" height="1" viewBox="0 0 12 1" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="0.5" x2="12" y2="0.5" stroke="#35913D"/></svg>
+                                    .number 45
+                                    .increase
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.47266 0.671875H7.52734C7.62109 0.671875 7.66797 0.71875 7.66797 0.8125V13.1875C7.66797 13.2812 7.62109 13.3281 7.52734 13.3281H6.47266C6.37891 13.3281 6.33203 13.2812 6.33203 13.1875V0.8125C6.33203 0.71875 6.37891 0.671875 6.47266 0.671875Z" fill="#35913D"/><path d="M1.09375 6.33203H12.9062C13 6.33203 13.0469 6.37891 13.0469 6.47266V7.52734C13.0469 7.62109 13 7.66797 12.9062 7.66797H1.09375C1 7.66797 0.953125 7.62109 0.953125 7.52734V6.47266C0.953125 6.37891 1 6.33203 1.09375 6.33203Z" fill="#35913D"/></svg>
+                    .cart__content__line__order-form
+                        h5 Итого:
+                            span 566391.96 ₽
+                        p *Работаем только с юридическими лицами.
+                        .cart__content__line__order-form__text-input
+                            input(
+                                placeholder='Ваше имя'
+                                type='text'
+                            )
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11.5" stroke="#6398DC"/><path d="M12.7109 14.7891H11.4062L11.3047 6.625H12.8203L12.7109 14.7891ZM11.25 17.2734C11.25 17.0391 11.3203 16.8438 11.4609 16.6875C11.6068 16.526 11.8203 16.4453 12.1016 16.4453C12.3828 16.4453 12.5964 16.526 12.7422 16.6875C12.888 16.8438 12.9609 17.0391 12.9609 17.2734C12.9609 17.5078 12.888 17.7031 12.7422 17.8594C12.5964 18.0104 12.3828 18.0859 12.1016 18.0859C11.8203 18.0859 11.6068 18.0104 11.4609 17.8594C11.3203 17.7031 11.25 17.5078 11.25 17.2734Z" fill="#6398DC"/></svg>
+                        .cart__content__line__order-form__text-input
+                            input(
+                                placeholder='Ваш номер телефона'
+                                type='text'
+                            )
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11.5" stroke="#6398DC"/><path d="M12.7109 14.7891H11.4062L11.3047 6.625H12.8203L12.7109 14.7891ZM11.25 17.2734C11.25 17.0391 11.3203 16.8438 11.4609 16.6875C11.6068 16.526 11.8203 16.4453 12.1016 16.4453C12.3828 16.4453 12.5964 16.526 12.7422 16.6875C12.888 16.8438 12.9609 17.0391 12.9609 17.2734C12.9609 17.5078 12.888 17.7031 12.7422 17.8594C12.5964 18.0104 12.3828 18.0859 12.1016 18.0859C11.8203 18.0859 11.6068 18.0104 11.4609 17.8594C11.3203 17.7031 11.25 17.5078 11.25 17.2734Z" fill="#6398DC"/></svg>
+                        .cart__content__line__order-form__button
+                            a(href='#').transparent-button Заказать звонок
+                .cart__content__line
+                    .cart__content__line__unit
+                        .cart__content__line__unit__image
+                            img(src='../../assets/img/catalog-selected1.png')
+                        .cart__content__line__unit__information
+                            .cart__content__line__unit__information__description
+                                .cart__content__line__unit__information__description__name
+                                    p Компрессор полугерметичный Frascold W75-240Y
+                                .cart__content__line__unit__information__description__price
+                                    p 566391.96 ₽
+                                    span 623031.156 ₽
+                            .cart__content__line__unit__information__buttons
+                                <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 10H10V22H8V10Z" fill="#35913D"/><path d="M14 10H16V22H14V10Z" fill="#35913D"/><path d="M0 4V6H2V26C2 26.5304 2.21071 27.0391 2.58579 27.4142C2.96086 27.7893 3.46957 28 4 28H20C20.5304 28 21.0391 27.7893 21.4142 27.4142C21.7893 27.0391 22 26.5304 22 26V6H24V4H0ZM4 26V6H20V26H4Z" fill="#35913D"/><path d="M8 0H16V2H8V0Z" fill="#35913D"/></svg>
+                                .cart__content__line__unit__information__buttons__counter
+                                    .decrease
+                                        <svg width="12" height="1" viewBox="0 0 12 1" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="0.5" x2="12" y2="0.5" stroke="#35913D"/></svg>
+                                    .number 0
+                                    .increase
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.47266 0.671875H7.52734C7.62109 0.671875 7.66797 0.71875 7.66797 0.8125V13.1875C7.66797 13.2812 7.62109 13.3281 7.52734 13.3281H6.47266C6.37891 13.3281 6.33203 13.2812 6.33203 13.1875V0.8125C6.33203 0.71875 6.37891 0.671875 6.47266 0.671875Z" fill="#35913D"/><path d="M1.09375 6.33203H12.9062C13 6.33203 13.0469 6.37891 13.0469 6.47266V7.52734C13.0469 7.62109 13 7.66797 12.9062 7.66797H1.09375C1 7.66797 0.953125 7.62109 0.953125 7.52734V6.47266C0.953125 6.37891 1 6.33203 1.09375 6.33203Z" fill="#35913D"/></svg>
+                    .cart__content__line__unit
+                        .cart__content__line__unit__image
+                            img(src='../../assets/img/catalog-selected1.png')
+                        .cart__content__line__unit__information
+                            .cart__content__line__unit__information__description
+                                .cart__content__line__unit__information__description__name
+                                    p Компрессор полугерметичный Frascold W75-240Y
+                                .cart__content__line__unit__information__description__price
+                                    p 566391.96 ₽
+                                    span 623031.156 ₽
+                            .cart__content__line__unit__information__buttons
+                                <svg width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 10H10V22H8V10Z" fill="#35913D"/><path d="M14 10H16V22H14V10Z" fill="#35913D"/><path d="M0 4V6H2V26C2 26.5304 2.21071 27.0391 2.58579 27.4142C2.96086 27.7893 3.46957 28 4 28H20C20.5304 28 21.0391 27.7893 21.4142 27.4142C21.7893 27.0391 22 26.5304 22 26V6H24V4H0ZM4 26V6H20V26H4Z" fill="#35913D"/><path d="M8 0H16V2H8V0Z" fill="#35913D"/></svg>
+                                .cart__content__line__unit__information__buttons__counter
+                                    .decrease
+                                        <svg width="12" height="1" viewBox="0 0 12 1" fill="none" xmlns="http://www.w3.org/2000/svg"><line y1="0.5" x2="12" y2="0.5" stroke="#35913D"/></svg>
+                                    .number 90
+                                    .increase
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.47266 0.671875H7.52734C7.62109 0.671875 7.66797 0.71875 7.66797 0.8125V13.1875C7.66797 13.2812 7.62109 13.3281 7.52734 13.3281H6.47266C6.37891 13.3281 6.33203 13.2812 6.33203 13.1875V0.8125C6.33203 0.71875 6.37891 0.671875 6.47266 0.671875Z" fill="#35913D"/><path d="M1.09375 6.33203H12.9062C13 6.33203 13.0469 6.37891 13.0469 6.47266V7.52734C13.0469 7.62109 13 7.66797 12.9062 7.66797H1.09375C1 7.66797 0.953125 7.62109 0.953125 7.52734V6.47266C0.953125 6.37891 1 6.33203 1.09375 6.33203Z" fill="#35913D"/></svg>
+
+
+
+    block content
+        include ../includes/modules/footer
+
+
+block scripts
+    script(src="assets/scripts/main.js")
