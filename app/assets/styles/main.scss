@@ -1340,6 +1340,66 @@ footer{
     }
   }
 }
+.certificates{
+  padding: 158px 0 60px 0;
+  h2{
+    color:#6398DC;
+    padding: 0 0 70px 0;
+  }
+  &__table{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &__unit{
+      width: 33.5%;
+      padding: 14px 33px;
+      border: 1px solid #6398DC;
+      margin: -1px -1px 0 0;
+      display: flex;
+      flex-direction: column;
+      h5{
+        margin:0;
+        padding: 0 0 10px 0;
+        font-weight: 400;
+        color:#4D4D4D;
+      }
+      p{
+        font-weight: 400;
+        color:#696969;
+        margin: 0;
+        padding: 0 0 40px 0;
+      }
+      &__button{
+        display: flex;
+        flex: 1;
+        a{
+          font-weight: 400;
+          font-size: 1.8rem;
+          color:#4D4D4D;
+          margin:0;
+          border-bottom: 1px solid #4D4D4D;
+          text-decoration: none;
+          align-self: flex-end;
+          transition: all 0.2s ease;
+          svg{
+            path{
+              transition: all 0.2s ease;
+            }
+          }
+        }
+        a:hover{
+          color:#35913D;
+          border-bottom: 1px solid #35913D;
+          svg{
+            path{
+              fill: #35913D;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 .main-background{
   width: 100%;
   height: 450px;
