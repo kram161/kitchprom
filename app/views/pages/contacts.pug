@@ -1,0 +1,20 @@
+extends ../layouts/master
+
+block title
+    link(rel="stylesheet", href="assets/css/styles.min.css")
+
+block content
+    include ../includes/modules/menu
+    .container
+        .contacts
+            block content
+                include ../includes/modules/feedback
+
+
+    block content
+        include ../includes/modules/footer
+
+
+
+block scripts
+    script(src="assets/scripts/main.min.js")
