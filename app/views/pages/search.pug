@@ -1,0 +1,26 @@
+extends ../layouts/master
+
+block title
+    link(rel="stylesheet", href="assets/css/styles.min.css")
+
+block content
+    include ../includes/modules/menu
+
+    .container
+        .search
+            h2 Поиск по сайту
+            .search__form
+                input(
+                    type='text'
+                    placeholder='Введите запрос...'
+                )
+                a(href='#').color-button Найти
+
+
+            block content
+                include  ../includes/modules/product-catalog
+    block content
+        include ../includes/modules/footer
+
+block scripts
+    script(src="assets/scripts/main.min.js")

@@ -188,7 +188,7 @@
     }
   }
   &__unit-way{
-    display: none;
+    display: block;
   }
 }
 footer{
@@ -357,6 +357,7 @@ footer{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding: 0 0 120px 0;
     &__form{
       width: 51%;
       h2{
@@ -857,7 +858,7 @@ footer{
     }
   }
   &__product-table{
-    margin:50px 0 0 0;
+    margin:50px 0 60px 0;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -865,7 +866,7 @@ footer{
     &__unit{
       width: 23%;
       padding: 35px 25px;
-      margin: 0 auto;
+      margin: 40px 10px 0 10px;
       border: 1px solid #6398DC;
       box-sizing: border-box;
       &__body{
@@ -1488,9 +1489,36 @@ footer{
     }
   }
 }
-.contacts{
-  padding: 0 0 120px 0;
+.search{
+  padding: 158px 0 60px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  h2{
+    padding: 0 0 68px 0;
+    color:#6398DC;
+  }
+  &__form{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    input{
+      color:#696969;
+      font-size: 1.6rem;
+      font-weight: 400;
+      border-bottom: 1px solid #6398DC;
+      padding: 12px 0;
+      margin:0 20px 0 0;
+      width: 100%;
+    }
+    input::placeholder{
+      color:#696969;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+  }
 }
+
 
 .main-background{
   width: 100%;
