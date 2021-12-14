@@ -1,5 +1,5 @@
-window.addEventListener('load',function (){
-    window.onload = function(){
+try{
+    window.onload = function () {
         slideOne();
         slideTwo();
     }
@@ -12,26 +12,30 @@ window.addEventListener('load',function (){
     let sliderTrack = document.querySelector(".catalog-selected__filters__buttons__range__wrapper__container__slider-track");
     let sliderMaxValue = document.getElementById("slider-1").max;
 
-    function slideOne(){
-        if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+    function slideOne() {
+        if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
             sliderOne.value = parseInt(sliderTwo.value) - minGap;
         }
         displayValOne.textContent = sliderOne.value;
         fillColor();
     }
-    function slideTwo(){
-        if(parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap){
+
+    function slideTwo() {
+        if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
             sliderTwo.value = parseInt(sliderOne.value) + minGap;
         }
         displayValTwo.textContent = sliderTwo.value;
         fillColor();
     }
-    function fillColor(){
+
+    function fillColor() {
         percent1 = (sliderOne.value / sliderMaxValue) * 100;
         percent2 = (sliderTwo.value / sliderMaxValue) * 100;
         sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}% , #6398DC ${percent1}% , #6398DC ${percent2}%, #dadae5 ${percent2}%)`;
     }
-})
+
+}
+catch {};
 
 window.addEventListener('load',function (){
         const minus = document.querySelectorAll('.decrease')
