@@ -14478,3 +14478,210 @@ footer .footer__social-networks__logo a:hover svg {
   font-size: 1.6rem;
   font-weight: 400;
 }
+
+.menu-wrapper .mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .menu-wrapper .menu {
+    display: none;
+  }
+  .menu-wrapper__unit-way {
+    display: none;
+  }
+  .menu-wrapper .mobile-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 16px 0;
+  }
+  .menu-wrapper .mobile-menu__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu-wrapper .mobile-menu__logo svg {
+    margin: auto 0;
+  }
+  .menu-wrapper .mobile-menu__logo p {
+    font-size: 1.8rem;
+    color: #6398DC;
+    margin: auto 0;
+    padding: 0 0 0 16px;
+  }
+  .menu-wrapper .mobile-menu__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu-wrapper .mobile-menu__buttons__search, .menu-wrapper .mobile-menu__buttons__cart, .menu-wrapper .mobile-menu__buttons__burger {
+    margin: auto 0 auto 16px;
+    cursor: pointer;
+  }
+  .menu-wrapper .mobile-menu__buttons__cart {
+    position: relative;
+  }
+  .menu-wrapper .mobile-menu__buttons__cart svg {
+    position: relative;
+  }
+  .menu-wrapper .mobile-menu__buttons__cart span {
+    width: 10px;
+    height: 10px;
+    content: "";
+    border-radius: 100%;
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    background: #35913D;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger {
+    position: relative;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__button {
+    width: 35px;
+    height: 1px;
+    content: "";
+    background: #696969;
+    position: relative;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__button:before, .menu-wrapper .mobile-menu__buttons__burger__button:after {
+    position: absolute;
+    content: "";
+    background: #696969;
+    width: 35px;
+    height: 1px;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__button:before {
+    top: -6px;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__button:after {
+    bottom: -6px;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: auto;
+    height: auto;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: end;
+    width: auto;
+    background: #fff;
+    height: 100%;
+    padding: 60px 0 60px 87px;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content h2, .menu-wrapper .mobile-menu__buttons__burger__block__modal__content .h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #6398DC;
+    margin: 0;
+    padding: 0 0 60px 0;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content__list a {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #696969;
+    text-decoration: none;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    margin: 0;
+    padding: 15px 0;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content__list a:hover {
+    color: #6398DC;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content__list a:last-child {
+    padding: 15px 0 30px 0;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content__social-network {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    border-top: 1px solid #6398DC;
+    border-bottom: 1px solid #6398DC;
+    padding: 30px 0;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content__social-network svg {
+    margin: 0 0 0 8px;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content__social-network svg:hover {
+    -webkit-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 15px 0;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content__contacts a {
+    color: #696969;
+    font-weight: 400;
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 15px 0;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 15px 0;
+    text-align: center;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__content__buttons a {
+    margin: 15px 0;
+  }
+  .menu-wrapper .mobile-menu__buttons__burger__block__modal__button {
+    background: #fff;
+    padding: 66px 20px;
+  }
+}

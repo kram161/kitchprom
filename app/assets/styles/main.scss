@@ -46,6 +46,7 @@
   max-width: 1440px;
   padding: 0 25px;
   margin:0 auto;
+
 }
 .transparent-button,.color-button{
   display: inline-block;
@@ -1570,4 +1571,190 @@ footer{
       font-weight: 400;
     }
   }
+}
+.menu-wrapper{
+  .mobile-menu{
+    display: none;
+  }
+}
+$xs: 320px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+@media screen and (max-width:1200px){
+
+}
+@media screen and (max-width:992px){
+  .menu-wrapper{
+    .menu{
+      display: none;
+    }
+    &__unit-way{
+      display: none;
+    }
+    .mobile-menu{
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0;
+      &__logo{
+        display: flex;
+        svg{
+          margin:auto 0;
+        }
+        p{
+          font-size: 1.8rem;
+          color: #6398DC;
+          margin: auto 0;
+          padding: 0 0 0 16px;
+        }
+      }
+      &__buttons{
+        display: flex;
+        &__search,&__cart,&__burger{
+          margin: auto 0 auto 16px;
+          cursor: pointer;
+        }
+        &__cart{
+          position: relative;
+          svg{
+            position: relative;
+          }
+          span{
+            width: 10px;
+            height: 10px;
+            content: '';
+            border-radius: 100%;
+            position: absolute;
+            top:-2px;
+            right: -3px;
+            background: #35913D;
+          }
+        }
+        &__burger{
+          position: relative;
+          &__button{
+            width: 35px;
+            height: 1px;
+            content: '';
+            background: #696969;
+            position: relative;
+          }
+          &__button:before,&__button:after{
+            position: absolute;
+            content: '';
+            background: #696969;
+            width: 35px;
+            height: 1px;
+          }
+          &__button:before{
+            top:-6px;
+          }
+          &__button:after{
+            bottom: -6px;
+          }
+          &__block{
+            position: fixed;
+            right: 0;
+            top:0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            overflow-y: scroll;
+            &__modal{
+              display: flex;
+              justify-content: flex-end;
+              width: auto;
+              height: auto;
+              &__content{
+                display: flex;
+                flex-direction: column;
+                text-align: end;
+                width: auto;
+                background: #fff;
+                height: 100%;
+                padding: 60px 0 60px 87px;
+                h2{
+                  font-size: 2.4rem;
+                  font-weight: 700;
+                  color:#6398DC;
+                  margin:0;
+                  padding: 0 0 60px 0;
+                }
+                &__list{
+                  display: flex;
+                  flex-direction: column;
+                  a{
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    color:#696969;
+                    text-decoration: none;
+                    transition: all 0.2s linear;
+                    margin:0;
+                    padding: 15px 0;
+                  }
+                  a:hover{
+                    color:#6398DC;
+                  }
+                  a:last-child{
+                    padding: 15px 0 30px 0;
+                  }
+                }
+                &__social-network{
+                  display: flex;
+                  justify-content: flex-end;
+                  border-top: 1px solid #6398DC;
+                  border-bottom: 1px solid #6398DC;
+                  padding: 30px 0;
+                  svg{
+                    margin:0 0 0 8px;
+                    transition: all 0.2s linear;
+                  }
+                  svg:hover{
+                    transform: scale(1.1,1.1);
+                  }
+                }
+                &__contacts{
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                  padding: 15px 0;
+                  a{
+                    color:#696969;
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                    text-decoration: none;
+                    padding: 15px 0;
+                  }
+                }
+                &__buttons{
+                  display: flex;
+                  flex-direction: column;
+                  padding: 15px 0;
+                  text-align: center;
+                  a{
+                    margin: 15px 0;
+                  }
+                }
+              }
+              &__button{
+                background: #fff;
+                padding: 66px 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:768px){
+
+}
+@media screen and (max-width:576px){
+
+}
+@media screen and (max-width:320px){
+
 }
