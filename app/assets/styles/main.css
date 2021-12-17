@@ -12917,6 +12917,9 @@ footer .footer__social-networks__logo a:hover svg {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.main-page__description__buttons {
+  display: none;
+}
 .main-page__activity-spheres {
   width: 100%;
 }
@@ -13093,32 +13096,44 @@ footer .footer__social-networks__logo a:hover svg {
 
 .catalog {
   padding: 70px 0 0 0;
-}
-.catalog__line {
-  width: 100%;
-  height: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-  z-index: 1;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.catalog table {
+  border-collapse: collapse;
+}
+.catalog table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-collapse: collapse;
+}
+.catalog table tr th {
+  border-collapse: collapse;
+}
+.catalog table tr .catalog__unit {
   border: 1px solid #6398DC;
+  height: 250px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-collapse: inherit;
 }
-.catalog__line__unit:not(:last-child) {
-  border-right: 1px solid #6398DC;
-}
-.catalog__line__unit-narrow, .catalog__line__unit-wide {
+.catalog table tr .catalog__unit-narrow, .catalog table tr .catalog__unit-wide {
   padding: 25px;
-  height: 100%;
   position: relative;
   cursor: pointer;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.catalog__line__unit-narrow__description, .catalog__line__unit-wide__description {
+.catalog table tr .catalog__unit-narrow .catalog__unit-narrow__description, .catalog table tr .catalog__unit-narrow .catalog__unit-wide__description, .catalog table tr .catalog__unit-wide .catalog__unit-narrow__description, .catalog table tr .catalog__unit-wide .catalog__unit-wide__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -13132,7 +13147,7 @@ footer .footer__social-networks__logo a:hover svg {
   height: 100%;
   width: 100%;
 }
-.catalog__line__unit-narrow__description p, .catalog__line__unit-wide__description p {
+.catalog table tr .catalog__unit-narrow .catalog__unit-narrow__description p, .catalog table tr .catalog__unit-narrow .catalog__unit-wide__description p, .catalog table tr .catalog__unit-wide .catalog__unit-narrow__description p, .catalog table tr .catalog__unit-wide .catalog__unit-wide__description p {
   width: 100%;
   margin: 0;
   font-size: 2.4rem;
@@ -13141,7 +13156,7 @@ footer .footer__social-networks__logo a:hover svg {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.catalog__line__unit-narrow__description a, .catalog__line__unit-wide__description a {
+.catalog table tr .catalog__unit-narrow .catalog__unit-narrow__description a, .catalog table tr .catalog__unit-narrow .catalog__unit-wide__description a, .catalog table tr .catalog__unit-wide .catalog__unit-narrow__description a, .catalog table tr .catalog__unit-wide .catalog__unit-wide__description a {
   font-size: 1.8rem;
   font-weight: 400;
   border-bottom: 1px solid #4D4D4D;
@@ -13152,45 +13167,42 @@ footer .footer__social-networks__logo a:hover svg {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.catalog__line__unit-narrow__description a svg, .catalog__line__unit-wide__description a svg {
+.catalog table tr .catalog__unit-narrow .catalog__unit-narrow__description a svg, .catalog table tr .catalog__unit-narrow .catalog__unit-wide__description a svg, .catalog table tr .catalog__unit-wide .catalog__unit-narrow__description a svg, .catalog table tr .catalog__unit-wide .catalog__unit-wide__description a svg {
   margin: 0 0 0 25px;
 }
-.catalog__line__unit-narrow__description a svg path, .catalog__line__unit-wide__description a svg path {
+.catalog table tr .catalog__unit-narrow .catalog__unit-narrow__description a svg path, .catalog table tr .catalog__unit-narrow .catalog__unit-wide__description a svg path, .catalog table tr .catalog__unit-wide .catalog__unit-narrow__description a svg path, .catalog table tr .catalog__unit-wide .catalog__unit-wide__description a svg path {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.catalog__line__unit-narrow img, .catalog__line__unit-wide img {
+.catalog table tr .catalog__unit-narrow img, .catalog table tr .catalog__unit-wide img {
   position: absolute;
   right: 0;
   bottom: 0;
 }
-.catalog__line__unit-narrow {
+.catalog table tr .catalog__unit-narrow {
   width: 25%;
 }
-.catalog__line__unit-wide {
+.catalog table tr .catalog__unit-wide {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.catalog__line__unit-wide__description p {
+.catalog table tr .catalog__unit-wide .catalog__unit-wide__description p {
   width: 70%;
 }
-.catalog__line__unit-narrow:hover, .catalog__line__unit-wide:hover {
+.catalog table tr .catalog__unit-narrow:hover, .catalog table tr .catalog__unit-wide:hover {
   background: #6398DC;
 }
-.catalog__line__unit-narrow:hover .catalog__line__unit-narrow__description p, .catalog__line__unit-narrow:hover .catalog__line__unit-wide__description p, .catalog__line__unit-wide:hover .catalog__line__unit-narrow__description p, .catalog__line__unit-wide:hover .catalog__line__unit-wide__description p {
+.catalog table tr .catalog__unit-narrow:hover .catalog__unit-narrow__description p, .catalog table tr .catalog__unit-narrow:hover .catalog__unit-wide__description p, .catalog table tr .catalog__unit-wide:hover .catalog__unit-narrow__description p, .catalog table tr .catalog__unit-wide:hover .catalog__unit-wide__description p {
   color: #fff;
 }
-.catalog__line__unit-narrow:hover .catalog__line__unit-narrow__description a, .catalog__line__unit-narrow:hover .catalog__line__unit-wide__description a, .catalog__line__unit-wide:hover .catalog__line__unit-narrow__description a, .catalog__line__unit-wide:hover .catalog__line__unit-wide__description a {
+.catalog table tr .catalog__unit-narrow:hover .catalog__unit-narrow__description a, .catalog table tr .catalog__unit-narrow:hover .catalog__unit-wide__description a, .catalog table tr .catalog__unit-wide:hover .catalog__unit-narrow__description a, .catalog table tr .catalog__unit-wide:hover .catalog__unit-wide__description a {
   color: #fff;
   border-bottom: 1px solid #fff;
 }
-.catalog__line__unit-narrow:hover .catalog__line__unit-narrow__description a svg path, .catalog__line__unit-narrow:hover .catalog__line__unit-wide__description a svg path, .catalog__line__unit-wide:hover .catalog__line__unit-narrow__description a svg path, .catalog__line__unit-wide:hover .catalog__line__unit-wide__description a svg path {
+.catalog table tr .catalog__unit-narrow:hover .catalog__unit-narrow__description a svg path, .catalog table tr .catalog__unit-narrow:hover .catalog__unit-wide__description a svg path, .catalog table tr .catalog__unit-wide:hover .catalog__unit-narrow__description a svg path, .catalog table tr .catalog__unit-wide:hover .catalog__unit-wide__description a svg path {
   fill: #fff;
-}
-.catalog__line:not(:first-child) {
-  border-top: none;
 }
 
 .our-partners {
@@ -14484,6 +14496,40 @@ footer .footer__social-networks__logo a:hover svg {
 }
 
 @media screen and (max-width: 992px) {
+  :root {
+    font-size: 10px;
+    font-family: roboto sans-serif;
+    color: #4D4D4D;
+  }
+  :root h2, :root .h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+  }
+  :root h3, :root .h3 {
+    font-family: "Raleway", sans-serif;
+    font-size: 4.8rem;
+    font-weight: 700;
+  }
+  :root h4, :root .h4 {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  :root h5, :root .h5 {
+    font-family: Roboto, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #696969;
+    margin: 0;
+  }
+  :root p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #696969;
+    margin: 0;
+  }
+
   .menu-wrapper .menu {
     display: none;
   }
@@ -14569,6 +14615,7 @@ footer .footer__social-networks__logo a:hover svg {
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
     overflow-y: scroll;
+    display: none;
   }
   .menu-wrapper .mobile-menu__buttons__burger__block__modal {
     display: -webkit-box;
@@ -14683,5 +14730,57 @@ footer .footer__social-networks__logo a:hover svg {
   .menu-wrapper .mobile-menu__buttons__burger__block__modal__button {
     background: #fff;
     padding: 66px 20px;
+  }
+
+  .main-page h2 svg, .main-page .h2 svg {
+    width: 19px;
+    height: 19px;
+  }
+  .main-page__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-page__description__information, .main-page__description__text {
+    width: 100%;
+  }
+  .main-page__description__information__buttons {
+    display: none;
+  }
+  .main-page__description__text {
+    padding: 20px 0 30px 0;
+  }
+  .main-page__description__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main-page__activity-spheres {
+    padding: 40px 0 0 0;
+  }
+  .main-page__activity-spheres p {
+    width: 100%;
+  }
+
+  .main-page-second {
+    padding: 0;
+  }
+
+  .catalog {
+    padding: 40px 0 0 0;
+    position: relative;
+  }
+  .catalog__unit-narrow {
+    width: 50%;
+  }
+  .catalog__unit-wide {
+    width: 100%;
   }
 }

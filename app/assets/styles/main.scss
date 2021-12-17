@@ -287,6 +287,9 @@ footer{
         justify-content: space-between;
       }
     }
+    &__buttons{
+      display: none;
+    }
   }
   &__activity-spheres{
     width: 100%;
@@ -455,94 +458,101 @@ footer{
   margin: 40px 0;
   position: relative;
 }
-.catalog{
-  padding:70px 0 0 0;
-  &__line{
-    width: 100%;
-    height: 250px;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    z-index: 1;
-    border: 1px solid #6398DC;
-    &__unit:not(:last-child){
-      border-right: 1px solid #6398DC;
-    }
-    &__unit-narrow,&__unit-wide{
-      padding: 25px;
-      height: 100%;
-      position: relative;
-      cursor: pointer;
-      transition: all 0.2s linear;
-      &__description{
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        height: 100%;
-        width: 100%;
-        p{
-          width: 100%;
-          margin: 0;
-          font-size: 2.4rem;
-          font-weight: 400;
-          color:#4D4D4D;
-          transition: all 0.2s linear;
-        }
-        a{
-          font-size: 1.8rem;
-          font-weight: 400;
-          border-bottom: 1px solid #4D4D4D;
-          display: inline-block;
-          width: 112px;
-          text-decoration: none;
-          color: #4D4D4D;
-          transition: all 0.2s linear;
-          svg{
-            margin: 0 0 0 25px;
-            path{
-              transition: all 0.2s linear;
-            }
-          }
-        }
-      }
-      img{
-        position: absolute;
-        right: 0;
-        bottom: 0;
-      }
-    }
-    &__unit-narrow{
-      width: 25%;
-    }
-    &__unit-wide{
-      width: 50%;
+
+.catalog {
+  padding: 70px 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  table{
+    border-collapse: collapse;
+    tr{
       display: flex;
-      &__description{
-        p{
-          width: 70%;
+      flex-wrap: wrap;
+      border-collapse: collapse;
+      th{
+        border-collapse: collapse;
+      }
+      .catalog__unit{
+        border: 1px solid #6398DC;
+        height: 250px;
+        box-sizing: border-box;
+        border-collapse: inherit;
+      }
+      .catalog__unit-narrow,.catalog__unit-wide {
+        padding: 25px;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s linear;
+        .catalog__unit-narrow__description,.catalog__unit-wide__description {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
+          p {
+            width: 100%;
+            margin: 0;
+            font-size: 2.4rem;
+            font-weight: 400;
+            color: #4D4D4D;
+            transition: all 0.2s linear;
+          }
+          a {
+            font-size: 1.8rem;
+            font-weight: 400;
+            border-bottom: 1px solid #4D4D4D;
+            display: inline-block;
+            width: 112px;
+            text-decoration: none;
+            color: #4D4D4D;
+            transition: all 0.2s linear;
+            svg {
+              margin: 0 0 0 25px;
+
+              path {
+                transition: all 0.2s linear;
+              }
+            }
+          }
+        }
+        img {
+          position: absolute;
+          right: 0;
+          bottom: 0;
         }
       }
-    }
-    &__unit-narrow:hover,&__unit-wide:hover{
-      background: #6398DC;
-      .catalog__line__unit-narrow__description,.catalog__line__unit-wide__description{
-        p{
-          color:#fff;
+      .catalog__unit-narrow {
+        width: 25%;
+      }
+      .catalog__unit-wide {
+        width: 50%;
+        display: flex;
+        .catalog__unit-wide__description {
+          p {
+            width: 70%;
+          }
         }
-        a{
-          color:#fff;
-          border-bottom: 1px solid #fff;
-          svg{
-            path{
-              fill:#fff;
+      }
+      .catalog__unit-narrow:hover, .catalog__unit-wide:hover {
+        background: #6398DC;
+        .catalog__unit-narrow__description, .catalog__unit-wide__description {
+          p {
+            color: #fff;
+          }
+          a {
+            color: #fff;
+            border-bottom: 1px solid #fff;
+            svg {
+              path {
+                fill: #fff;
+              }
             }
           }
         }
       }
     }
-  }
-  &__line:not(:first-child){
-    border-top:none;
+
   }
 }
 .our-partners{
@@ -1577,16 +1587,44 @@ footer{
     display: none;
   }
 }
-$xs: 320px;
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
 
 @media screen and (max-width:1200px){
 
 }
 @media screen and (max-width:992px){
+  :root {
+    font-size: 10px;
+    font-family: roboto sans-serif;
+    color:#4D4D4D;
+    h2{
+      font-family: 'Raleway', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 700;
+    }
+    h3{
+      font-family: 'Raleway', sans-serif;
+      font-size: 4.8rem;
+      font-weight: 700;
+    }
+    h4{
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+    h5{
+      font-family: Roboto, sans-serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #696969;
+      margin:0;
+    }
+    p{
+      font-size: 1.4rem;
+      font-weight: 400;
+      color:#696969;
+      margin:0;
+    }
+  }
   .menu-wrapper{
     .menu{
       display: none;
@@ -1662,6 +1700,7 @@ $xl: 1200px;
             width: 100%;
             background: rgba(0, 0, 0, 0.5);
             overflow-y: scroll;
+            display: none;
             &__modal{
               display: flex;
               justify-content: flex-end;
@@ -1746,6 +1785,52 @@ $xl: 1200px;
           }
         }
       }
+    }
+  }
+  .main-page{
+    h2{
+      svg{
+        width: 19px;
+        height: 19px;
+      }
+    }
+    &__description{
+      display: flex;
+      flex-direction: column;
+      &__information,&__text{
+        width: 100%;
+      }
+      &__information{
+        &__buttons{
+          display: none;
+        }
+      }
+      &__text{
+        padding: 20px 0 30px 0;
+      }
+      &__buttons{
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__activity-spheres{
+      padding: 40px 0 0 0;
+      p{
+        width: 100%;
+      }
+    }
+  }
+  .main-page-second{
+    padding: 0;
+  }
+  .catalog{
+    padding: 40px 0 0 0;
+    position: relative;
+    &__unit-narrow {
+      width: 50%;
+    }
+    &__unit-wide {
+      width: 100%
     }
   }
 }
