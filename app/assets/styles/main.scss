@@ -579,8 +579,12 @@ footer{
   }
 }
 .catalog-page{
-  padding: 126px 0 0 0;
+  padding: 158px 0 0 0;
   width: 100%;
+  h2{
+    color:#6398DC;
+    margin:0 18px 0 0;
+  }
   .catalog{
     margin: 70px 0 170px 0;
   }
@@ -1900,6 +1904,20 @@ footer{
     background-size: auto 100%;
     margin: 40px 0;
     position: relative;
+  }
+  .catalog-page{
+    padding: 100px 0 0 0;
+    h2{
+      svg{
+        width: 20px;
+        height: 20px;
+        margin: 0 0 0 18px;
+      }
+    }
+    .catalog{
+      margin:0;
+      padding: 30px 0 60px 0;
+    }
   }
 }
 @media screen and (max-width:768px){
