@@ -13595,7 +13595,7 @@ footer .footer__wrapper__social-networks__logo a:hover svg {
 }
 .catalog-selected__product-table__unit {
   width: 23%;
-  padding: 35px 25px;
+  padding: 35px 20px;
   margin: 40px 10px 0 10px;
   border: 1px solid #6398DC;
   -webkit-box-sizing: border-box;
@@ -14490,6 +14490,13 @@ footer .footer__wrapper__social-networks__logo a:hover svg {
 }
 
 @media screen and (max-width: 1200px) {
+  .menu-wrapper .menu__list__unit a {
+    font-size: 1.6rem;
+  }
+  .menu-wrapper .menu__list__button a {
+    padding: 12px 20px;
+  }
+
   .catalog table {
     border-collapse: separate;
   }
@@ -14514,6 +14521,10 @@ footer .footer__wrapper__social-networks__logo a:hover svg {
   }
   .catalog table tr .catalog__unit {
     margin: 8px 0 0 0;
+  }
+
+  .catalog-selected__product-table__unit {
+    width: calc(33.3% - 20px);
   }
 }
 @media screen and (max-width: 992px) {
@@ -14835,6 +14846,15 @@ footer .footer__wrapper__social-networks__logo a:hover svg {
     padding: 40px 0 0 0;
     position: relative;
   }
+  .catalog table:nth-child(2) tbody tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
   .catalog__unit-narrow {
     width: 50%;
   }
@@ -14882,6 +14902,131 @@ footer .footer__wrapper__social-networks__logo a:hover svg {
   .catalog-page .catalog {
     margin: 0;
     padding: 30px 0 60px 0;
+  }
+
+  .catalog-selected {
+    padding: 100px 0 60px 0;
+  }
+  .catalog-selected .catalog-selected__type-list-active {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .catalog-selected .catalog-selected__type-list-active .catalog-selected__type-list__title {
+    width: 100%;
+  }
+  .catalog-selected .catalog-selected__type-list-active .catalog-selected__type-list__title h2, .catalog-selected .catalog-selected__type-list-active .catalog-selected__type-list__title .h2 {
+    width: auto;
+    height: auto;
+    padding: 0 0 20px 0;
+  }
+  .catalog-selected .catalog-selected__type-list-active .catalog-selected__type-list__title svg {
+    margin: 19px 0 0 0;
+  }
+  .catalog-selected .catalog-selected__type-list-active .catalog-selected__type-list__menu {
+    width: 100%;
+  }
+  .catalog-selected .catalog-selected__type-list-active .catalog-selected__type-list__menu a {
+    border: none;
+    padding: 0 0 20px 0;
+  }
+  .catalog-selected__filters {
+    margin: 10px 0 0 0;
+    width: 100%;
+  }
+  .catalog-selected__filters__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .catalog-selected__filters__list a {
+    white-space: nowrap;
+    margin: 10px 20px 0 0;
+  }
+  .catalog-selected__filters__category {
+    cursor: pointer;
+    padding: 12px;
+    border: 1px solid #6398DC;
+    width: 280px;
+    margin: 20px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+  .catalog-selected__filters__category a, .catalog-selected__filters__category span {
+    color: #4D4D4D;
+    font-size: 1.8rem;
+    text-decoration: none;
+  }
+  .catalog-selected__filters__buttons {
+    display: none;
+  }
+  .catalog-selected__filters .catalog-selected__filters__buttons-active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    margin: 0;
+    background: #fff;
+    z-index: 2;
+    margin: -21px 0 0 0;
+  }
+  .catalog-selected__filters .catalog-selected__filters__buttons-active .catalog-selected__filters__buttons__simple {
+    border-right: 1px solid #6398DC;
+    border-left: 1px solid #6398DC;
+    border-bottom: none;
+    border-top: none;
+    width: 280px;
+    margin: 0;
+    padding: 12px 12px 0 12px;
+  }
+  .catalog-selected__filters .catalog-selected__filters__buttons-active .catalog-selected__filters__buttons__simple .catalog-selected__filters__buttons__simple__title {
+    border-top: 1px solid #6398DC;
+    padding: 20px 0 0 0;
+  }
+  .catalog-selected__filters .catalog-selected__filters__buttons-active .catalog-selected__filters__buttons__simple .catalog-selected__filters__buttons__simple__title a:not(:first-child) {
+    display: none;
+  }
+  .catalog-selected__filters .catalog-selected__filters__buttons-active .catalog-selected__filters__buttons__simple .catalog-selected__filters__buttons__simple__list {
+    height: auto;
+    visibility: visible;
+    position: relative;
+    border: none;
+    padding: 12px 0;
+  }
+  .catalog-selected__filters .catalog-selected__filters__buttons-active .catalog-selected__filters__buttons__simple .catalog-selected__filters__buttons__simple__list .catalog-selected__filters__buttons__simple__list__check-box {
+    margin: 5px 0;
+  }
+  .catalog-selected__filters .catalog-selected__filters__buttons-active .catalog-selected__filters__buttons__range {
+    width: 280px;
+    border-right: 1px solid #6398dc;
+    border-left: 1px solid #6398dc;
+    border-bottom: 1px solid #6398dc;
+    border-top: none;
+    padding: 0 12px 12px 12px;
+  }
+  .catalog-selected__filters .catalog-selected__filters__buttons-active .catalog-selected__filters__buttons__range .catalog-selected__filters__buttons__range__wrapper {
+    border-top: 1px solid #6398dc;
+    padding: 12px 7px 0 0;
+  }
+  .catalog-selected__filters .catalog-selected__filters__buttons-active .catalog-selected__filters__buttons__range p {
+    padding: 10px 0 0 0;
+  }
+  .catalog-selected__product-table {
+    margin: 10px 0 10px 0;
+  }
+  .catalog-selected__product-table__unit {
+    width: calc(50% - 5px);
+    margin: 20px 5px 0 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -15001,6 +15146,21 @@ footer .footer__wrapper__social-networks__logo a:hover svg {
   }
   .main-page__feedback__form__buttons a:first-child {
     margin: 0 8px 0 0;
+  }
+
+  .catalog-selected__product-table__unit {
+    width: 100%;
+    margin: 20px 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .transparent-button, .color-button {

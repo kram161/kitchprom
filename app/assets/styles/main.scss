@@ -885,7 +885,7 @@ footer{
     width: 100%;
     &__unit{
       width: 23%;
-      padding: 35px 25px;
+      padding: 35px 20px;
       margin: 40px 10px 0 10px;
       border: 1px solid #6398DC;
       box-sizing: border-box;
@@ -1591,6 +1591,22 @@ footer{
 }
 
 @media screen and (max-width:1200px){
+  .menu-wrapper{
+    .menu{
+      &__list{
+        &__unit{
+          a{
+            font-size: 1.6rem;
+          }
+        }
+        &__button{
+          a{
+            padding: 12px 20px;
+          }
+        }
+      }
+    }
+  }
   .catalog{
     table{
       border-collapse: separate;
@@ -1610,6 +1626,13 @@ footer{
         .catalog__unit{
           margin:8px 0 0 0;
         }
+      }
+    }
+  }
+  .catalog-selected{
+    &__product-table{
+      &__unit{
+        width: calc(33.3% - 20px);
       }
     }
   }
@@ -1878,6 +1901,14 @@ footer{
   .catalog{
     padding: 40px 0 0 0;
     position: relative;
+    table:nth-child(2){
+      tbody{
+        tr{
+          display: flex;
+          flex-direction: row-reverse;
+        }
+      }
+    }
     &__unit-narrow {
       width: 50%;
     }
@@ -1917,6 +1948,117 @@ footer{
     .catalog{
       margin:0;
       padding: 30px 0 60px 0;
+    }
+  }
+  .catalog-selected{
+    padding: 100px 0 60px 0;
+    .catalog-selected__type-list-active{
+      flex-direction: column;
+      .catalog-selected__type-list__title{
+        width: 100%;
+        h2{
+          width: auto;
+          height: auto;
+          padding: 0 0 20px 0;
+        }
+        svg{
+          margin:19px 0 0 0;
+        }
+      }
+      .catalog-selected__type-list__menu{
+        width: 100%;
+        a{
+          border: none;
+          padding: 0 0 20px 0;
+        }
+      }
+    }
+    &__filters{
+      margin:10px 0 0 0;
+      width: 100%;
+      &__list{
+        flex-wrap: wrap;
+        a{
+          white-space: nowrap;
+          margin:10px 20px 0 0;
+        }
+      }
+      &__category{
+        cursor: pointer;
+        padding: 12px;
+        border: 1px solid #6398DC;
+        width: 280px;
+        margin:20px 0;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        a,span{
+          color:#4D4D4D;
+          font-size: 1.8rem;
+          text-decoration: none;
+        }
+      }
+      &__buttons{
+        display: none;
+      }
+      .catalog-selected__filters__buttons-active{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin:0;
+        background: #fff;
+        z-index: 2;
+        margin:-21px 0 0 0;
+        .catalog-selected__filters__buttons__simple{
+          border-right: 1px solid #6398DC;
+          border-left: 1px solid #6398DC;
+          border-bottom: none;
+          border-top: none;
+          width: 280px;
+          margin:0;
+          padding: 12px 12px 0 12px;
+          .catalog-selected__filters__buttons__simple__title{
+            border-top:1px solid #6398DC;
+            padding: 20px 0 0 0;
+            a:not(:first-child){
+              display: none;
+            }
+          }
+          .catalog-selected__filters__buttons__simple__list{
+            height: auto;
+            visibility: visible;
+            position: relative;
+            border: none;
+            padding: 12px 0;
+            .catalog-selected__filters__buttons__simple__list__check-box{
+              margin:5px 0;
+            }
+          }
+        }
+        .catalog-selected__filters__buttons__range{
+          width: 280px;
+          border-right: 1px solid #6398dc;
+          border-left: 1px solid #6398dc;
+          border-bottom: 1px solid #6398dc;
+          border-top: none;
+          padding: 0 12px 12px 12px;
+          .catalog-selected__filters__buttons__range__wrapper{
+            border-top: 1px solid #6398dc;
+            padding: 12px 7px 0 0;
+          }
+          p{
+            padding: 10px 0 0 0;
+          }
+        }
+      }
+    }
+    &__product-table{
+      margin:10px 0 10px 0;
+      &__unit{
+        width: calc(50% - 5px);
+        margin:20px 5px 0 0;
+      }
     }
   }
 }
@@ -2044,6 +2186,17 @@ footer{
             margin: 0 8px 0 0;
           }
         }
+      }
+    }
+  }
+  .catalog-selected{
+    &__product-table{
+      &__unit{
+        width: 100%;
+        margin:20px 0 0 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
       }
     }
   }
