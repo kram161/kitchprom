@@ -37,26 +37,26 @@ try{
 }
 catch {};
 
-window.addEventListener('load',function (){
-        const minus = document.querySelectorAll('.decrease')
-        const plus = document.querySelectorAll('.increase')
-        let number = document.querySelectorAll('.number')
-        for (let i = 0; i < number.length; i++){
-            let numberInt = number[i].textContent;
-            plus[i].addEventListener('click',function (){
-                numberInt = Number(numberInt) + 1;
+window.addEventListener('load', function () {
+    const minus = document.querySelectorAll('.decrease')
+    const plus = document.querySelectorAll('.increase')
+    let number = document.querySelectorAll('.number')
+    for (let i = 0; i < number.length; i++) {
+        let numberInt = number[i].textContent;
+        plus[i].addEventListener('click', function () {
+            numberInt = Number(numberInt) + 1;
+            let numberText = '' + numberInt;
+            number[i].innerHTML = numberText;
+        })
+        minus[i].addEventListener('click', function () {
+            if (numberInt < 0) {
+                numberInt = 0;
+            } else if (numberInt > 0) {
+                numberInt = Number(numberInt) - 1;
                 let numberText = '' + numberInt;
                 number[i].innerHTML = numberText;
-            })
-            minus[i].addEventListener('click',function (){
-                if( numberInt < 0){
-                    numberInt = 0;
-                }
-                else if(numberInt > 0){
-                    numberInt = Number(numberInt) - 1;
-                    let numberText = '' + numberInt;
-                    number[i].innerHTML = numberText;
-                }
-            })
-        }
+            }
+        })
+    }
 })
+

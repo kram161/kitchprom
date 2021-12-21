@@ -1790,10 +1790,17 @@ footer{
         }
         &__burger{
           position: relative;
+          display: block;
+          margin:auto 0;
+          width: 100%;
+          height: 100%;
+          padding:0 0 0 16px;
           &__button{
             width: 35px;
             height: 1px;
             content: '';
+            top:50%;
+            transform: translateY(-50%);
             background: #696969;
             position: relative;
           }
